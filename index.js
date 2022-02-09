@@ -4,7 +4,7 @@ let inquirer = require('inquirer');
 const fs = require('fs');
 
 // array of question objects to collect data for README.md file
-const information = [
+const info = [
      {
       type: 'input',
       message: 'What is the name/title of your project?',
@@ -34,6 +34,11 @@ const information = [
       type: 'input',
       message: 'What is your github url?',
       name: 'github',
+    },
+    {
+      type: 'input',
+      message: 'What is your email address?',
+      name: 'email',
     },
     {
       type: 'input',
@@ -76,10 +81,16 @@ const information = [
 const fileName = "README.md";
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+
+  fs.createMarkdown();
+}
 
 // TODO: Create a function to initialize app
-function init() { }
+function init() { 
+
+  inquirer.prompt(info).then(writeToFile);
+}
 
 // Function call to initialize app
 init();
