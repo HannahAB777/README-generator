@@ -1,47 +1,85 @@
-// TODO: Include packages needed for this application
-var inquirer = require('inquirer');
-inquirer
-  .prompt([
-    {//title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-     //license for my application from a list of options
-     
-     type: 'input',
-      message: 'What is your user name?',
-      name: 'username',
+// Packages included for this aplication
+let inquirer = require('inquirer');
+
+const fs = require('fs');
+
+// array of question objects to collect data for README.md file
+const information = [
+     {
+      type: 'input',
+      message: 'What is the name/title of your project?',
+      name: 'title',
     },
     {
-      type: 'password',
-      message: 'What is your password?',
-      name: 'password',
+      type: 'input',
+      message: 'please describe your project.',
+      name: 'description',
     },
     {
-      type: 'password',
-      message: 'Re-enter password to confirm:',
-      name: 'confirm',
+      type: 'input',
+      message: 'What are the instructions for installation?',
+      name: 'installation',
     },
-  ])
-  .then((response) =>
-    response.confirm === response.password
-      ? console.log('Success!')
-      : console.log('You forgot your password already?!')
-  )
+    {
+      type: 'input',
+      message: 'How to you use the app, site or program?',
+      name: 'usage',
+    },
+    {
+      type: 'input',
+      message: 'What is your name?',
+      name: 'name',
+    },
+    {
+      type: 'input',
+      message: 'What is your github url?',
+      name: 'github',
+    },
+    {
+      type: 'input',
+      message: 'did anyone else contribute to this repository? if yes, please write their names here.',
+      name: 'contributor-names',
+    },
+    {
+      type: 'input',
+      message: 'did anyone else contribute to this repository? if yes, please write their github username here.',
+      name: 'contributor-githubs',
+    },
+    {
+      type: 'input',
+      message: 'please link to badges here.',
+      name: 'badges',
+    },
+    {
+      type: 'input',
+      message: 'What are the features of this repository?.',
+      name: 'features',
+    },
+    {
+      type: 'input',
+      message: 'how can others contribute to this repository?',
+      name: 'how-to-contribute',
+    },
+    {
+      type: 'input',
+      message: 'please explain any tests for your application with examples.',
+      name: 'tests',
+    },
+    {
+      type: 'input',
+      message: 'would you like other developers to be able to conact you with questions? if yes please provide a preferred contact method below.',
+      name: 'questions',
+    },
 
-  .catch((error) => {
-    if (error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
-    } else {
-      // Something else went wrong
-    }
-  });
-
-// TODO: Create an array of questions for user input
-const questions = [];
+  ];
+ 
+const fileName = "README.md";
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() { }
 
 // Function call to initialize app
 init();
