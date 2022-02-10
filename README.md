@@ -44,7 +44,7 @@
     
   ## Tests
 
-  no tests
+  npm test
     
   ## Questions
 
