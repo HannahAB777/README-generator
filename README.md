@@ -1,4 +1,4 @@
-# README generator
+# README Generator
 
   ## License
   
@@ -6,7 +6,7 @@
   
   ## Description
   
-  A program to help generate README files from user inputs
+  a README generator based on user inputs
   
   ## Table of Contents
   | Table of Contents|
@@ -23,35 +23,33 @@
   
   ## Installation
   
-  download and run the index.js file in your intergrated terminal
+  download and run in the intergrated terminal
   
   ## Usage
 
-  run the program in terminal and follow the prompts
+  Run in the intergrated terminal and follow the prompts
   
   ## Credits
 
-  Hannah
+  Hannah Allison-Batt
   [https://github.com/HannahAB777](https://github.com/HannahAB777)
-  undefined
-  |undefined|(undefined)
   
   ## Features
   
-  none
+  it can create a Readme file from user inputs
 
   ## How to Contribute
 
-  undefined
+  however they like
     
   ## Tests
 
-  none
+  no tests
     
   ## Questions
 
   For any questions regarding this repository please contact me below,
-  Hannah
+  Hannah Allison-Batt
   https://github.com/HannahAB777
   Hannah.AllisonBatt@gmail.com
   
