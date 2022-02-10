@@ -4,11 +4,17 @@ let inquirer = require('inquirer');
 const fs = require('fs');
 
 // array of question objects to collect data for README.md file
-const info = [
+const questions = [
      {
       type: 'input',
       message: 'What is the name/title of your project?',
       name: 'title',
+    },
+    {
+      type: 'list',
+      message: 'did you use a license for this project? please select from the below choices.',
+      choices: ['apache', 'boost', 'ISC', 'mozilla', 'none'],
+      name: 'license',
     },
     {
       type: 'input',
@@ -28,7 +34,7 @@ const info = [
     {
       type: 'input',
       message: 'What is your name?',
-      name: 'name',
+      name: 'user',
     },
     {
       type: 'input',
@@ -73,23 +79,25 @@ const info = [
     {
       type: 'input',
       message: 'would you like other developers to be able to conact you with questions? if yes please provide a preferred contact method below.',
-      name: 'questions',
+      name: 'question',
     },
 
   ];
  
-const fileName = "README.md";
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(questions, answers) {
+  renderLicenseBadge(license); 
 
-  fs.createMarkdown();
+  fs.generateMarkdown(answers.title, license , answers.description, answers.installation, answers.usage, answers.user, answers.github, answers.contributorNames, answers.contributorGithubs, answers.features, answers.howToContribute, answers.tests, answers.question, answers.email ); {
+
+}
 }
 
 // TODO: Create a function to initialize app
 function init() { 
 
-  inquirer.prompt(info).then(writeToFile);
+  inquirer.prompt(questions, answers).then(writeToFile);
 }
 
 // Function call to initialize app
