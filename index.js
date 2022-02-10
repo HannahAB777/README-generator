@@ -50,35 +50,19 @@ const questions = [
   },
   {
     type: 'input',
-    message: 'did anyone else contribute to this repository? if yes, please write their names here.',
-    name: 'contributor-names',
-  },
-  {
-    type: 'input',
-    message: 'did anyone else contribute to this repository? if yes, please write their github username here.',
-    name: 'contributor-githubs',
-  },
-  {
-    type: 'input',
     message: 'What are the features of this repository?.',
     name: 'features',
   },
   {
     type: 'input',
     message: 'how can others contribute to this repository?',
-    name: 'how-to-contribute',
+    name: 'howToContribute',
   },
   {
     type: 'input',
     message: 'please explain any tests for your application with examples.',
     name: 'tests',
   },
-  {
-    type: 'input',
-    message: 'would you like other developers to be able to conact you with questions? if yes please provide a preferred contact method below.',
-    name: 'question',
-  },
-
 ];
 
 

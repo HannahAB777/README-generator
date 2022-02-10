@@ -24,7 +24,7 @@ function renderLicenseBadge(license) {
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown({ title, license, description, installation, usage, user, github, contributorNames, contributorGithubs, features, howToContribute, tests, questions, email }) {
+function generateMarkdown({ title, license, description, installation, usage, user, github, features, howToContribute, tests, email, }) {
   return `# ${title}
 
   ## License
@@ -60,8 +60,6 @@ function generateMarkdown({ title, license, description, installation, usage, us
 
   ${user}
   [${github}](${github})
-  ${contributorNames}
-  |${contributorGithubs}|(${contributorGithubs})
   
   ## Features
   
@@ -77,11 +75,10 @@ function generateMarkdown({ title, license, description, installation, usage, us
     
   ## Questions
 
-  ${questions}
   For any questions regarding this repository please contact me below,
   ${user}
-  |${github}|(${github})
-  |${email}|(${email})
+  ${github}
+  ${email}
   `;
 }
 
