@@ -2,34 +2,34 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   switch (license) {
-    case apache:
+    case "apache":
       license = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
 
       break;
-    case boost:
+    case "boost":
       license = "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
 
       break;
-    case ISC:
+    case "ISC":
       license = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)";
       break;
-    case mozilla:
+    case "mozilla":
       license = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
       break;
-    case none:
+    case "none":
       license = "";
       break;
   }
-  return licenseInfo;
+  return license;
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(title, license, description, installation, usage, user, github, contributorNames, contributorGithubs, features, howToContribute, tests, questions, email) {
+function generateMarkdown({ title, license, description, installation, usage, user, github, contributorNames, contributorGithubs, features, howToContribute, tests, questions, email }) {
   return `# ${title}
 
   ## License
   
-  ${license}
+  ${renderLicenseBadge(license)}
   
   ## Description
   
@@ -85,7 +85,7 @@ function generateMarkdown(title, license, description, installation, usage, user
   `;
 }
 
-module.exports = {generateMarkdown,
-  renderLicenseBadge};
+module.exports = generateMarkdown;
+
 
 
