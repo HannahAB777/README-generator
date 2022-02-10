@@ -8,6 +8,12 @@
   
   a README generator based on user inputs
   
+  below is a screenshot of the open terminal and a link to a video showing the functionality of the app:
+  https://watch.screencastify.com/v/HuQdTxxw3OHhQlUGDeqf
+  
+  ![Preview README md - Untitled (Workspace) - Visual Studio Code 10_02_2022 1_20_21 PM](https://user-images.githubusercontent.com/93077324/153342975-1cbb8905-64ef-430b-8ae6-8d85f5c39ae2.png)
+
+  
   ## Table of Contents
   | Table of Contents|
   | ----------- |
