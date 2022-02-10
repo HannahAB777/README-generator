@@ -58,11 +58,6 @@ const questions = [
     },
     {
       type: 'input',
-      message: 'please link to badges here.',
-      name: 'badges',
-    },
-    {
-      type: 'input',
       message: 'What are the features of this repository?.',
       name: 'features',
     },
@@ -86,18 +81,20 @@ const questions = [
  
 
 // TODO: Create a function to write README file
-function writeToFile(questions, answers) {
-  renderLicenseBadge(license); 
+function writeToFile(answers) {
+  renderLicenseBadge(answers.license); 
 
-  fs.generateMarkdown(answers.title, license , answers.description, answers.installation, answers.usage, answers.user, answers.github, answers.contributorNames, answers.contributorGithubs, answers.features, answers.howToContribute, answers.tests, answers.question, answers.email ); {
+  fs.generateMarkdown("README.md", generateMarkdown(answers.title, renderLicenseBadge() , answers.description, answers.installation, answers.usage, answers.user, answers.github, answers.contributorNames, answers.contributorGithubs, answers.features, answers.howToContribute, answers.tests, answers.question, answers.email), 
+  
+  (error) => 
+        error ? console.error(error) : console.log('You have created a ReadMe file'));
 
-}
 }
 
 // TODO: Create a function to initialize app
 function init() { 
 
-  inquirer.prompt(questions, answers).then(writeToFile);
+  inquirer.prompt(questions).then(writeToFile);
 }
 
 // Function call to initialize app
